@@ -16,6 +16,8 @@ public class Conversacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    //@Enumerated(EnumType.STRING)
+    //private Canal canal; // WhatsApp, Email
     private String canal; // WhatsApp, Email
 
     @Column(columnDefinition = "TEXT")
@@ -29,4 +31,9 @@ public class Conversacion {
     @ManyToOne
     @JoinColumn(name = "contacto_id")
     private Contacto contacto;
+
+    @Column(columnDefinition = "TEXT")
+    private String asunto;
+
+    private String estado; // ENVIADO, ERROR
 }

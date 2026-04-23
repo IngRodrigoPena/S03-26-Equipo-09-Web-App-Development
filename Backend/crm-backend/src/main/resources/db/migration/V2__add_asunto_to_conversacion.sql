@@ -1,0 +1,1 @@
+ALTER TABLE conversaciones ADD COLUMN asunto VARCHAR(255);
